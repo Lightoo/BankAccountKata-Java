@@ -16,6 +16,7 @@ public class StatementPrinterTest {
     @BeforeEach
     void setUp(){
         accountService = new AccountServiceImpl();
+        statementPrinter = new StatementPrinterImpl();
     }
     @Test
     void print_non_empty_account_transaction() throws Exception {
