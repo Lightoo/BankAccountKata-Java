@@ -19,6 +19,11 @@ public class AccountServiceImpl implements AccountService{
 
     @Override
     public void withdraw(Account account, double amount) throws Exception {
-
+        if(amount<=0 || amount>account.getBalance()) throw new Exception("insufficient balance");
+        double newBalance = account.getBalance() - amount;
+        account.setBalance(newBalance);
+        account.getTransactions().add(
+                new Transaction(OperationType.WITHDRAW,new Date(),amount,newBalance)
+        );
     }
 }
