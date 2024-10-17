@@ -1,7 +1,6 @@
 package org.kata.bankaccount.model;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class Account {
@@ -27,9 +26,5 @@ public class Account {
 
     public List<Transaction> getTransactions() {
         return transactions;
-    }
-
-    public void setTransactions(List<Transaction> transactions) {
-        this.transactions = transactions;
     }
 }

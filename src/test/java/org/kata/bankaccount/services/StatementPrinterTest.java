@@ -34,7 +34,7 @@ public class StatementPrinterTest {
 
     }
     @Test
-    void print_empty_account_transaction() throws Exception {
+    void print_empty_account_transaction() {
         Account account = new Account();
         String expectedValue="Operation;Date;Amount;Balance";
         assertEquals(expectedValue,statementPrinter.print(account));

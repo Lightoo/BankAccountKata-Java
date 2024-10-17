@@ -27,9 +27,7 @@ public class AccountServiceTest {
     @Test()
     void deposit_with_negative_amount() {
         Account account = new Account();
-        assertThrows(Exception.class,()->{
-            accountService.deposit(account,-200);
-        });
+        assertThrows(Exception.class,()-> accountService.deposit(account,-200));
     }
     @Test
     void withdraw_with_sufficient_amount() throws Exception {
@@ -41,8 +39,6 @@ public class AccountServiceTest {
     @Test
     void withdraw_with_insufficient_amount() {
         Account account = new Account(1000, new ArrayList<>());
-        assertThrows(Exception.class,()->{
-            accountService.withdraw(account,2000);
-        });
+        assertThrows(Exception.class,()-> accountService.withdraw(account,2000));
     }
 }
